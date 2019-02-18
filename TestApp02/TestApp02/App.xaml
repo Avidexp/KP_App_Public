@@ -4,5 +4,8 @@
              x:Class="TestApp02.App">
     <Application.Resources>
 
+            <!--To Define common resources / color schemes to be used throughout the application -->
+                <Color x:Key="blueColor">#1E90FF</Color>
+
     </Application.Resources>
 </Application>

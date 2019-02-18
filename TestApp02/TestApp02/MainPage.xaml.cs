@@ -13,5 +13,19 @@ namespace TestApp02
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            // Alert to tell the user the button has been pressed
+            //DisplayAlert("Success", "We have handled the click event", "Great!");
+            Navigation.PushAsync(new MapPage());
+        }
+
+
+
+        private void MapToolbarItem_Activated(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MapPage());
+        }
     }
 }

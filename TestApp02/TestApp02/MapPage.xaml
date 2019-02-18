@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:testApp02="clr-namespace:TestApp02;assembly=TestApp02"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="TestApp02.MapPage">
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Get Location"
+                     Clicked="Button2_OnClicked"
+        >
+
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout VerticalOptions="Center" Margin="10,10,10,10">
+            <Label Text="KP Delivery Ticket" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" 
+                   FontSize="30" 
+                   Margin="0,40,0,20" />
+
+            <Label Text="Customer Number"
+                   Margin="5"></Label>
+                <Entry  x:Name="CustomerNumber" VerticalOptions="Center" 
+                    Placeholder="Customer #"/>
+
+            <Label Text="Delivery Ticket"
+                   Margin="5"></Label>
+                <Entry  x:Name="DeliveryTicket" VerticalOptions="Center" 
+                    Placeholder="Delivery Ticket #" 
+            />
+
+            <Label Text="Items"
+                   Margin="5"></Label>
+                <input:CheckBox x:Name="UnleadedGasCheck" Text="Unleaded Gas" Type="Check" />
+            <Entry  x:Name="UnleadedGas" VerticalOptions="Center" 
+                    Placeholder="Unleaded Gas" 
+            />
+
+            <input:CheckBox x:Name="SuperGasCheck" Text="Super Gas" Type="Check" />
+            <Entry  x:Name="SuperGas" VerticalOptions="Center" 
+                    Placeholder="Super Gas" 
+            />
+            <input:CheckBox x:Name="ClearDieselCheck" Text="Clear Diesel" Type="Check" />
+
+            <Entry  x:Name="ClearDiesel" VerticalOptions="Center" 
+                    Placeholder="Clear Diesel" 
+
+            />
+            <input:CheckBox x:Name="RedDieselCheck" Text="Red Diesel" Type="Check" />
+            <Entry  x:Name="RedDiesel" VerticalOptions="Center" 
+                    Placeholder="Red Diesel" 
+            />
+            <Label Text="Picture of Receipt - Still Needs Testing"></Label>
+            <Image x:Name="PhotoImage" />
+            <Button x:Name="CameraButton" Text="Take Photo" Grid.Row="1"  Clicked="CameraButton_OnClicked"/>
+
+
+                <Button VerticalOptions="Center" 
+                    x:Name="LoginButton" 
+                    Text="Send" 
+                    Clicked="ForSubmitBtn_Clicked"
+                    TextColor="White" BackgroundColor="SkyBlue" 
+                    Margin="0,50,0,0"></Button>
+
+
+     
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+        <!--<maps:Map HorizontalOptions="FillAndExpand" 
+                  VerticalOptions="FillAndExpand"          
+                  x:Name="LocationsMap"
+                  IsShowingUser="True"
+        ></maps:Map>-->
+
+  
+</ContentPage>
